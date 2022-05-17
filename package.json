@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss build -i src/styles.css -o public/styles.css",
-    "build1": "node ./node_modules/.bin/webpack --config webpack.config.js"
+    "build": "chmod -R 755 . && tailwindcss build -i src/styles.css -o public/styles.css"
   },
   "keywords": [],
   "author": "mehek-prabhakar <mehekprabhakar5@gmail.com>",

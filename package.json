@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "chmod -R 755 public && tailwindcss build -i src/styles.css -o public/styles.css"
+    "build": "chmod -R a+X public && tailwindcss build -i src/styles.css -o public/styles.css"
   },
   "keywords": [],
   "author": "mehek-prabhakar <mehekprabhakar5@gmail.com>",

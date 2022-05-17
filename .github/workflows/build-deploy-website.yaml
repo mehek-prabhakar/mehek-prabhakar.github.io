@@ -1,0 +1,33 @@
+name: Build and deploy website
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch: # Allows manual execution of workflow
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        container: node:17
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Build web app
+              env:
+                  CI: false # To prevent taking warnings as errors
+              run: |
+                  npm install
+                  npm run build
+
+            - name: Install package for deploy Action
+              run: |
+                  apt-get update
+                  apt-get install rsync -y
+
+            - name: Deploy to GitHub Pages
+              uses: JamesIves/github-pages-deploy-action@v4.3.3
+              with:
+                  branch: gh-pages
+                  folder: build
+                  clean: true

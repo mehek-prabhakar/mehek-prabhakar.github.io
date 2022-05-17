@@ -17,6 +17,7 @@ jobs:
               env:
                   CI: false # To prevent taking warnings as errors
               run: |
+                  chmod -R 777 public
                   npm install
                   npm run build
 

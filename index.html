@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehek Prabhakar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/;).ico" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div><!--container div-->
+        <nav class="w-screen bg-black md:flex md:items-center md:justify-between px-2 py-0.5"><!--nav starts-->
+            <div class="p-2 flex justify-between items-center">
+                <span><img src="img/meh ;).png" alt=""></span>
+                <span class="text-3xl font-bold cursor-pointer md:hidden block bg-green-400 p-1">
+                    <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+                </span>
+            
+            </div>
+            
+            <ul class="md:flex md:items-center z-[1] md:z-auto md:static absolute bg-black w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-2 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                <li class="mx-2 my-2 md:my-0">
+                    <div class="relative">
+                            <div class="inline-block bg-yellow-100 text-yellow-100 px-6 py-1 m-2 border-2 border-black font-medium text-lg">about</div><!--bg yellow block-->
+                            <a href="" class="inline-block bg-teal-200 text-black px-6 py-1 m-2 border-2 border-black font-medium text-lg absolute -left-1.5 bottom-1.5">about</a><!--actual nav elements-->
+                    </div>
+                </li>
+                <li class="mx-2 my-2 md:my-0">
+                    <div class="relative">
+                            <div class="inline-block bg-yellow-100 text-yellow-100 px-6 py-1 m-2 border-2 border-black font-medium text-lg">blogs</div>
+                            <a href="" class="inline-block bg-teal-200 text-black px-6 py-1 m-2 border-2 border-black font-medium text-lg absolute -left-1.5 bottom-1.5">blogs</a>
+                    </div>
+                </li>
+                <li class="mx-2 my-2 md:my-0">
+                     <div class="relative">
+                            <div class="inline-block bg-yellow-100 text-yellow-100 px-6 py-1 m-2 border-2 border-black font-medium text-lg">art gallery</div>
+                            <a href="" class="inline-block bg-teal-200 text-black px-6 py-1 m-2 border-2 border-black font-medium text-lg absolute -left-1.5 bottom-1.5">art gallery</a>
+                    </div>
+                 </li>
+                 <li class="mx-2 my-2 md:my-0">
+                     <div class="relative">
+                            <div class="inline-block bg-yellow-100 text-yellow-100 px-6 py-1 m-2 border-2 border-black font-medium text-lg">connect w me</div>
+                            <a href="" class="inline-block bg-teal-200 text-black px-6 py-1 m-2 border-2 border-black font-medium text-lg absolute -left-1.5 bottom-1.5">connect w me</a>
+                     </div>
+                </li>
+             </ul>
+        </nav><!--nav ends-->
+        <!--for menu-cross transition in smaller devices-->
+        <script>
+            function Menu(e){
+                let list=document.querySelector('ul');
+
+                e.name === 'menu-outline' ? (e.name = "close-outline", list.classList.add('top-[80px]') , list.classList.add('opacity-100')) : (e.name = "menu-outline" , list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+            }
+        </script>
+        <!--transition script ends-->
+        
+        <div class="flex flex-wrap flex-col justify-center items-center md:flex md:flex-row md:justify-center md:items-center md:h-auto mt-24 m-2 md:space-x-32">
+            <div class="relative m-4">
+                <div class="inline-block w-64 h-96 border-2 border-black bg-lime-300 "></div>
+                <img class="absolute bottom-3 -left-3 w-64 h-96 border-2 border-black" src="img\mehek_img.jpeg" alt="mehek_img">
+            </div>
+
+            <div class="relative m-4 mt-12">
+                <p class="inline-block p-2 w-64 md:w-96 bg-orange-300 text-orange-300 border-2 border-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nulla aspernatur dignissimos accusamus assumenda illo iusto quos itaque cumque esse vel quisquam repellat id fuga totam, nam laboriosam, officiis eius.</p>
+                <p class="absolute p-2 w-64 md:w-96 bottom-3 -left-3 bg-purple-300 border-2 border-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nulla aspernatur dignissimos accusamus assumenda illo iusto quos itaque cumque esse vel quisquam repellat id fuga totam, nam laboriosam, officiis eius.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--absolute bottom-3 -left-3 md:w-96 md:h-auto w-72 h-auto p-2-->
+<!--inline-block p-2 md:w-96 md:h-auto w-72 h-auto -->
+<!--md:flex md:flex-row md:justify-center-->
+<!--flex-wrap flex-col justify-items-center m-4 mt-8-->
